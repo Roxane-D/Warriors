@@ -3,7 +3,7 @@ package com.warriors;
 import java.util.Scanner;
 
 public class Menu {
-    Scanner scanner = new Scanner(System.in);
+//    Scanner scanner = new Scanner(System.in);
 
     public void chosePlayer() {
         boolean isReady = false;
