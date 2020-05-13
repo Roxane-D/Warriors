@@ -1,5 +1,8 @@
 package com.warriors;
 
+import com.warriors.characters.Sorcerer;
+import com.warriors.characters.Warrior;
+
 import java.util.Scanner;
 
 public class Menu {

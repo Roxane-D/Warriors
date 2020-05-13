@@ -1,4 +1,4 @@
-package com.warriors;
+package com.warriors.characters;
 
 public class Sorcerer {
     public String name;

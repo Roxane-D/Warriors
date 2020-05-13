@@ -1,4 +1,4 @@
-package com.warriors;
+package com.warriors.characters;
 
 public class Warrior {
     public String name;
@@ -7,6 +7,12 @@ public class Warrior {
 
     public Warrior() {
         name = "Unknown";
+        health = 10;
+        strength = 10;
+    }
+
+    public Warrior(String choosename) {
+        name = choosename;
         health = 10;
         strength = 10;
     }

@@ -18,7 +18,9 @@ public class Play {
             playerCase += newDice;
             turn++;
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Turn : " + turn + " | Roll Dice : " + newDice + " | Your hero is on the case " + playerCase);
+            System.out.println("Turn : " + turn +
+                    " | Roll Dice : " + newDice +
+                    " | Your hero is on the case " + playerCase);
             System.out.println("Press any key to continue.");
             scanner.nextLine();
         }
