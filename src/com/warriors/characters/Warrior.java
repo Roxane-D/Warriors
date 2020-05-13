@@ -19,9 +19,9 @@ public class Warrior {
 
     public String toString() {
         return
-                "Mon héro : " + this.name + "\n" +
-                        "Point de vie : " + this.health + "\n" +
-                        "Force : " + this.strength;
+                "HERO: " + this.name + "\n" +
+                        "HEALTH : " + this.health + "\n" +
+                        "STRENGTH : " + this.strength;
 
     }
 
