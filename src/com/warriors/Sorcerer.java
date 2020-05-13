@@ -7,8 +7,8 @@ public class Sorcerer {
 
     public Sorcerer() {
         name = "Unknown";
-        health = 10;
-        strength = 10;
+        health = 6;
+        strength = 15;
     }
 
     public Sorcerer(String choosename, int choosehealth, int choosestrength) {

@@ -11,7 +11,7 @@ public class Warrior {
         strength = 10;
     }
 
-    public Warrior(String choosename, String chooseimage, int choosehealth, int choosestrength) {
+    public Warrior(String choosename, int choosehealth, int choosestrength) {
         name = choosename;
         health = choosehealth;
         strength = choosestrength;

@@ -17,16 +17,16 @@ public class Menu {
                 case "WARRIOR" -> {
                     System.out.println("You are a " + playChoice + ". WAAAAGGGGHHHHH!!!!");
                     isReady = true;
-                    Warrior warrior1 = (Warrior) created(playChoice);
+                    Warrior warrior1 = (Warrior) creat(playChoice);
                 }
                 case "SORCERER" -> {
                     System.out.println("You are a fucking good " + playChoice);
                     isReady = true;
+                    Sorcerer sorcerer1 = (Sorcerer) creat(playChoice);
                 }
                 case "ESCAP" -> {
                     System.out.println("You escape..? looser");
                     isReady = true;
-                    Sorcerer sorcerer1 = (Sorcerer) created(playChoice);
                 }
                 default -> System.out.println("Choose better.");
             }
@@ -36,24 +36,24 @@ public class Menu {
         start.nextLine();
     }
 
-    public Object created(String hero) {
+    public Object creat(String hero) {
         if (hero.equals("WARRIOR")) {
             Warrior w1 = new Warrior();
 
             Scanner inputName = new Scanner(System.in);
             System.out.println("Chose your name : ");
-            String nameChoose = inputName.nextLine();
-            w1.setName(inputName.nextLine());
+            String choosename = inputName.nextLine();
+            w1.setName(choosename);
 
             Scanner inputHealth = new Scanner(System.in);
             System.out.println("Chose your health (5-10) : ");
-            int healthChoose = inputHealth.nextInt();
-            w1.setHealth(inputHealth.nextInt());
+            int choosehealth = inputHealth.nextInt();
+            w1.setHealth(choosehealth);
 
             Scanner inputStrength = new Scanner(System.in);
             System.out.println("Chose your strength (5-10) : ");
-            int strengthChoose = inputStrength.nextInt();
-            w1.setStrength(inputStrength.nextInt());
+            int choosestrength = inputStrength.nextInt();
+            w1.setStrength(choosestrength);
 
             System.out.println(w1.toString());
             return w1;
@@ -62,18 +62,18 @@ public class Menu {
 
             Scanner inputName = new Scanner(System.in);
             System.out.println("Chose your name : ");
-            String nameChoose = inputName.nextLine();
-            w1.setName(inputName.nextLine());
+            String choosename = inputName.nextLine();
+            w1.setName(choosename);
 
             Scanner inputHealth = new Scanner(System.in);
-            System.out.println("Chose your health (5-10) : ");
-            int healthChoose = inputHealth.nextInt();
-            w1.setHealth(inputHealth.nextInt());
+            System.out.println("Chose your health (3-6) : ");
+            int choosehealth = inputHealth.nextInt();
+            w1.setHealth(choosehealth);
 
             Scanner inputStrength = new Scanner(System.in);
-            System.out.println("Chose your strength (5-10) : ");
-            int strengthChoose = inputStrength.nextInt();
-            w1.setStrength(inputStrength.nextInt());
+            System.out.println("Chose your strength (8-15) : ");
+            int choosestrength = inputStrength.nextInt();
+            w1.setStrength(choosestrength);
 
             System.out.println(w1.toString());
             return w1;
