@@ -34,7 +34,7 @@ public abstract class Hero {
                         "STRENGTH : " + this.strength + "\n" +
                         "ATTACK : " + this.attack + "\n" +
                         "DEFENSE : " + this.defense + "\n" +
-                        "*****************************************";
+                        "****************************************";
 
     }
 

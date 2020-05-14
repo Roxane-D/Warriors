@@ -12,10 +12,22 @@ public class Play {
         return dice;
     }
 
+    public void move(int dice) throws OutOfBoard {
+        if (playerCase + dice > board) {
+            throw new OutOfBoard();
+        }
+        playerCase += dice;
+    }
+
     public void playGame() {
         while (playerCase < board) {
             int newDice = this.dice();
-            playerCase += newDice;
+            try {
+                move(newDice);
+            } catch (OutOfBoard e) {
+//                e.printStackTrace();
+                System.out.println("YOU PASSED AWAY... TRY AGAIN !");
+            }
             turn++;
             Scanner scanner = new Scanner(System.in);
             System.out.println("Turn : " + turn +

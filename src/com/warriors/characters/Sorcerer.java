@@ -6,7 +6,7 @@ public class Sorcerer extends Hero {
 
     /********************* constructor *********************/
     public Sorcerer() {
-        super("Sorcerer","Merlin", 5, 5, 5, 0 );
+        super("Sorcerer","Merlin", 5, 5, 5, 5 );
     }
 
     public Sorcerer(String choosetype) {
