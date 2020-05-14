@@ -1,5 +1,6 @@
 package com.warriors;
 
+import com.warriors.characters.Hero;
 import com.warriors.characters.Sorcerer;
 import com.warriors.characters.Warrior;
 
@@ -20,12 +21,12 @@ public class Menu {
                 case "WARRIOR" -> {
                     System.out.println("You are a " + playChoice + ". WAAAAGGGGHHHHH!!!!");
                     isReady = true;
-                    Warrior warrior1 = (Warrior) creat(playChoice);
+                    Warrior warrior1 = (Warrior) creatHero(playChoice);
                 }
                 case "SORCERER" -> {
                     System.out.println("You are a fucking good " + playChoice);
                     isReady = true;
-                    Sorcerer sorcerer1 = (Sorcerer) creat(playChoice);
+                    Sorcerer sorcerer1 = (Sorcerer) creatHero(playChoice);
                 }
                 case "ESCAP" -> {
                     System.out.println("You escape..? looser");
@@ -39,49 +40,38 @@ public class Menu {
         start.nextLine();
     }
 
-    public Object creat(String hero) {
+    public Object creatHero(String hero) {
         if (hero.equals("WARRIOR")) {
             Warrior w1 = new Warrior();
-
-            Scanner inputName = new Scanner(System.in);
-            System.out.println("Chose your name : ");
-            String choosename = inputName.nextLine();
-            w1.setName(choosename);
-
-            Scanner inputHealth = new Scanner(System.in);
-            System.out.println("Chose your health (5-10) : ");
-            int choosehealth = inputHealth.nextInt();
-            w1.setHealth(choosehealth);
-
-            Scanner inputStrength = new Scanner(System.in);
-            System.out.println("Chose your strength (5-10) : ");
-            int choosestrength = inputStrength.nextInt();
-            w1.setStrength(choosestrength);
-
+            definiteHero(w1);
             System.out.println(w1.toString());
+
             return w1;
         } else {
             Sorcerer w1 = new Sorcerer();
-
-            Scanner inputName = new Scanner(System.in);
-            System.out.println("Chose your name : ");
-            String choosename = inputName.nextLine();
-            w1.setName(choosename);
-
-            Scanner inputHealth = new Scanner(System.in);
-            System.out.println("Chose your health (3-6) : ");
-            int choosehealth = inputHealth.nextInt();
-            w1.setHealth(choosehealth);
-
-            Scanner inputStrength = new Scanner(System.in);
-            System.out.println("Chose your strength (8-15) : ");
-            int choosestrength = inputStrength.nextInt();
-            w1.setStrength(choosestrength);
-
+            definiteHero(w1);
             System.out.println(w1.toString());
+
             return w1;
 
         }
+    }
+
+    public void definiteHero(Hero h) {
+        Scanner inputName = new Scanner(System.in);
+        System.out.println("Chose your name : ");
+        String choosename = inputName.nextLine();
+        h.setName(choosename);
+
+        Scanner inputHealth = new Scanner(System.in);
+        System.out.println(" chose your health (3-6) : ");
+        int choosehealth = inputHealth.nextInt();
+        h.setHealth(choosehealth);
+
+        Scanner inputStrength = new Scanner(System.in);
+        System.out.println("Chose your strength (8-15) : ");
+        int choosestrength = inputStrength.nextInt();
+        h.setStrength(choosestrength);
     }
 };
 

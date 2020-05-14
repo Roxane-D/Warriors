@@ -24,6 +24,6 @@ public class Play {
             System.out.println("Press any key to continue.");
             scanner.nextLine();
         }
-        System.out.println("YOU WON !!!!");
+        System.out.println("YOU ROOOOOOOOOXXXXXXXXX !!!!");
     }
 }

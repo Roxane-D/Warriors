@@ -1,57 +1,45 @@
 package com.warriors.characters;
 
-public class Warrior {
-    public String name;
-    public int health;
-    public int strength;
+public class Warrior extends Hero {
 
+    private String type;
+
+    /********************* constructor *********************/
     public Warrior() {
-        name = "Unknown";
-        health = 10;
-        strength = 10;
+        super("Warrior","Conan", 5, 5, 5, 0 );
     }
 
-    public Warrior(String choosename) {
-        name = choosename;
-        health = 10;
-        strength = 10;
+    public Warrior(String choosetype) {
+        super(choosetype, "Unknown", 5, 5, 5, 5);
     }
 
-    public Warrior(String choosename, int choosehealth, int choosestrength) {
-        name = choosename;
-        health = choosehealth;
-        strength = choosestrength;
+    public Warrior(String choosetype, String choosename, int choosehealth, int choosestrength, int chooseattack, int choosedefense) {
+        super(choosetype, choosename, choosehealth, choosestrength, chooseattack, choosedefense);
     }
 
-    public String toString() {
-        return
-                "HERO: " + this.name + "\n" +
-                        "HEALTH : " + this.health + "\n" +
-                        "STRENGTH : " + this.strength;
+    /********************* getter *********************/
+    public String getName() { return name; }
 
-    }
+    public int getHealth() { return health; }
 
-    public String getName() {
-        return name;
-    }
+    public int getStrength() { return strength; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public int getAttack() { return attack; }
 
-    public int getHealth() {
-        return health;
-    }
+    public int getDefense() { return defense; }
 
-    public void setHealth(int health) {
-        this.health = health;
-    }
+    public String getType() { return type; }
 
-    public int getStrength() {
-        return strength;
-    }
+    /********************* setter *********************/
+    public void setName(String name) { this.name = name; }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
+    public void setHealth(int health) { this.health = health; }
+
+    public void setStrength(int strength) { this.strength = strength; }
+
+    public void setAttack(int attack) { this.attack = attack; }
+
+    public void setDefense(int defense) { this.defense = defense; }
+
+    public void setType(String type) { this.type = type; }
 }
