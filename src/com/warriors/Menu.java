@@ -1,7 +1,7 @@
 package com.warriors;
 
 import com.warriors.characters.Hero;
-import com.warriors.characters.Sorcerer;
+import com.warriors.characters.Wizard;
 import com.warriors.characters.Warrior;
 
 import java.util.Scanner;
@@ -14,7 +14,7 @@ public class Menu {
 
         while (!isReady) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println(" Choose your hero (warrior/sorcerer or escap) :");
+            System.out.println(" Choose your hero (warrior/wizard or escap) :");
             String playChoice = scanner.nextLine().toUpperCase();
 
             switch (playChoice) {
@@ -23,10 +23,10 @@ public class Menu {
                     isReady = true;
                     Warrior warrior1 = (Warrior) creatHero(playChoice);
                 }
-                case "SORCERER" -> {
+                case "WIZARD" -> {
                     System.out.println("You are a fucking good " + playChoice);
                     isReady = true;
-                    Sorcerer sorcerer1 = (Sorcerer) creatHero(playChoice);
+                    Wizard wizard1 = (Wizard) creatHero(playChoice);
                 }
                 case "ESCAP" -> {
                     System.out.println("You escape..? looser");
@@ -40,7 +40,7 @@ public class Menu {
         start.nextLine();
     }
 
-    public Object creatHero(String hero) {
+    public Hero creatHero(String hero) {
         if (hero.equals("WARRIOR")) {
             Warrior w1 = new Warrior();
             definiteHero(w1);
@@ -48,7 +48,7 @@ public class Menu {
 
             return w1;
         } else {
-            Sorcerer w1 = new Sorcerer();
+            Wizard w1 = new Wizard();
             definiteHero(w1);
             System.out.println(w1.toString());
 

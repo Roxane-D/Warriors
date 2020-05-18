@@ -1,16 +1,27 @@
 package com.warriors;
 
+import com.warriors.characters.Hero;
+import com.warriors.event.BoardGame;
+
 import java.util.Scanner;
 
 public class Play {
-    int board = 64;
-    int playerCase = 0;
-    int turn = 0;
+    private final Hero hero;
+    private int board = 64;
+    private int playerCase = 0;
+    private int turn = 0;
 
+    /********************* constructor *********************/
+    public Play(Hero hero){
+        this.hero = hero;
+    }
+
+    /********************* methods *********************/
     public int dice() {
         int dice = 1 + (int) (Math.random() * 6);
         return dice;
     }
+
 
     public void move(int dice) throws OutOfBoard {
         if (playerCase + dice > board) {
@@ -20,7 +31,10 @@ public class Play {
     }
 
     public void playGame() {
-        while (playerCase < board) {
+        BoardGame boardGame = new BoardGame();
+        Scanner scanner = new Scanner(System.in);
+
+        while (playerCase < boardGame.boardgame.size()) {
             int newDice = this.dice();
             try {
                 move(newDice);

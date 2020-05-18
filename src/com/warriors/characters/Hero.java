@@ -1,12 +1,12 @@
 package com.warriors.characters;
 
 public abstract class Hero {
-    protected String type;
-    protected String name;
-    protected int health;
-    protected int strength;
-    protected int attack;
-    protected int defense;
+    private String type;
+    private String name;
+    private int health;
+    private int strength;
+    private int attack;
+    private int defense;
 
     /********************* constructor *********************/
     public Hero() {
