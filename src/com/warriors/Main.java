@@ -1,16 +1,20 @@
 package com.warriors;
 
+import com.warriors.characters.Hero;
 import com.warriors.characters.Warrior;
 
 public class Main {
 
     public static void main(String[] args) {
 
-	Menu start = new Menu();
-	start.chosePlayer();
+        Menu start = new Menu();
+        Hero h = Menu.creatHero();
+        start.chosePlayer();
 
-	Play play = new Play();
-	play.playGame();
+
+
+        Play play = new Play(h);
+        play.playGame();
 
 //		Warrior Perceval = new Warrior();
 //		System.out.println(Perceval.name);

@@ -7,7 +7,6 @@ import com.warriors.characters.Warrior;
 import java.util.Scanner;
 
 public class Menu {
-//    Scanner scanner = new Scanner(System.in);
 
     public void chosePlayer() {
         boolean isReady = false;
@@ -73,5 +72,5 @@ public class Menu {
         int choosestrength = inputStrength.nextInt();
         h.setStrength(choosestrength);
     }
-};
+}
 

@@ -2,8 +2,6 @@ package com.warriors.characters;
 
 public class Wizard extends Hero {
 
-    private String type;
-
     /********************* constructor *********************/
     public Wizard() {
         super("Sorcerer","Merlin", 5, 5, 5, 5 );

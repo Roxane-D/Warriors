@@ -12,9 +12,10 @@ public class Play {
     private int turn = 0;
 
     /********************* constructor *********************/
-    public Play(Hero hero){
+    public Play(Hero hero) {
         this.hero = hero;
     }
+
 
     /********************* methods *********************/
     public int dice() {
@@ -31,22 +32,22 @@ public class Play {
     }
 
     public void playGame() {
-        BoardGame boardGame = new BoardGame();
+        BoardGame bg = new BoardGame();
         Scanner scanner = new Scanner(System.in);
 
-        while (playerCase < boardGame.boardgame.size()) {
+        while (playerCase < bg.boardGame.size()) {
             int newDice = this.dice();
             try {
                 move(newDice);
             } catch (OutOfBoard e) {
-//                e.printStackTrace();
-                System.out.println("YOU PASSED AWAY... TRY AGAIN !");
+                e.printStackTrace();
             }
+            bg.boardGame.get(playerCase).interact(this.hero);
             turn++;
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Turn : " + turn +
                     " | Roll Dice : " + newDice +
-                    " | Your hero is on the case " + playerCase);
+                    " | Your hero is on the case " + playerCase
+                    + "/n" + bg.boardGame.get(playerCase));
             System.out.println("Press any key to continue.");
             scanner.nextLine();
         }

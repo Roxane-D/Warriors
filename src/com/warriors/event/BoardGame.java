@@ -7,12 +7,10 @@ import java.util.ArrayList;
 
 public class BoardGame {
 
-    int nbCase = 64;
-    ArrayList<Event> boardgame;
+    private final int nbCase = 64;
+    public ArrayList<Event> boardGame = new ArrayList<>();
 
-    public BoardGame(it nbCase) {
-        this.nbCase = nbCase;
-        this.boardgame = new ArrayList<Event>();
+    public BoardGame() {
 
         for (int i = 0; i < nbCase; i++) {
             Event event = switch (i) {
@@ -28,20 +26,18 @@ public class BoardGame {
                 default -> new CaseEmpty();
             };
 
-            boardgame.add(event);
+            boardGame.add(event);
         }
 
     }
 
     /********************* getter *********************/
-
     public int getNbCase() { return nbCase; }
 
-    public ArrayList<Event> getBoard() { return board; }
+    public ArrayList<Event> getBoardGame() { return boardGame; }
 
     /********************* setter *********************/
-    public void setNbCase(int nbCase) { this.nbCase = nbCase; }
-
-    public void setBoard(ArrayList<Event> board) { this.board = board; }
-
+    public void setBoardGame(ArrayList<Event> boardGame) {
+        this.boardGame = boardGame;
+    }
 }

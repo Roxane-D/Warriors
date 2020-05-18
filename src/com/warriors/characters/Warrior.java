@@ -2,14 +2,14 @@ package com.warriors.characters;
 
 public class Warrior extends Hero {
 
-    private String type;
-
     /********************* constructor *********************/
     public Warrior() {
+
         super("Warrior","Conan", 5, 5, 5, 0 );
     }
 
     public Warrior(String choosetype) {
+
         super(choosetype, "Unknown", 5, 5, 5, 5);
     }
 
