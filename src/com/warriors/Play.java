@@ -35,19 +35,21 @@ public class Play {
         BoardGame bg = new BoardGame();
         Scanner scanner = new Scanner(System.in);
 
-        while (playerCase < bg.boardGame.size()) {
+        while (playerCase < bg.boardGame.size()-1) {
+            System.out.println(bg.boardGame.size()-1);
             int newDice = this.dice();
             try {
                 move(newDice);
             } catch (OutOfBoard e) {
-                e.printStackTrace();
+                e.message();
+//                e.printStackTrace();
             }
             bg.boardGame.get(playerCase).interact(this.hero);
             turn++;
             System.out.println("Turn : " + turn +
                     " | Roll Dice : " + newDice +
                     " | Your hero is on the case " + playerCase
-                    + "/n" + bg.boardGame.get(playerCase));
+                    + " | " + bg.boardGame.get(playerCase));
             System.out.println("Press any key to continue.");
             scanner.nextLine();
         }

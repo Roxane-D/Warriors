@@ -8,24 +8,23 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void chosePlayer() {
+    public String chosePlayer() {
         boolean isReady = false;
+        String playChoice = "";
 
         while (!isReady) {
             Scanner scanner = new Scanner(System.in);
             System.out.println(" Choose your hero (warrior/wizard or escap) :");
-            String playChoice = scanner.nextLine().toUpperCase();
+            playChoice = scanner.nextLine().toUpperCase();
 
             switch (playChoice) {
                 case "WARRIOR" -> {
                     System.out.println("You are a " + playChoice + ". WAAAAGGGGHHHHH!!!!");
                     isReady = true;
-                    Warrior warrior1 = (Warrior) creatHero(playChoice);
                 }
                 case "WIZARD" -> {
                     System.out.println("You are a fucking good " + playChoice);
                     isReady = true;
-                    Wizard wizard1 = (Wizard) creatHero(playChoice);
                 }
                 case "ESCAP" -> {
                     System.out.println("You escape..? looser");
@@ -37,9 +36,11 @@ public class Menu {
         Scanner start = new Scanner(System.in);
         System.out.println("Press any key to start the game !");
         start.nextLine();
+        return playChoice;
     }
 
-    public Hero creatHero(String hero) {
+    public Hero creatHero() {
+        String hero = chosePlayer();
         if (hero.equals("WARRIOR")) {
             Warrior w1 = new Warrior();
             definiteHero(w1);

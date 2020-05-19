@@ -12,7 +12,7 @@ public class BoardGame {
 
     public BoardGame() {
 
-        for (int i = 0; i < nbCase; i++) {
+        for (int i = 0; i <= nbCase; i++) {
             Event event = switch (i) {
                 case 45, 52, 56, 62 -> new Dragon();
                 case 10, 20, 25, 32, 35, 36, 37, 40, 44, 47 -> new Sorcerer();

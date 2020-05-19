@@ -8,10 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         Menu start = new Menu();
-        Hero h = Menu.creatHero();
-        start.chosePlayer();
-
-
+        Hero h = start.creatHero();
 
         Play play = new Play(h);
         play.playGame();
