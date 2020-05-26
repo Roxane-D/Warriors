@@ -10,6 +10,10 @@ public class BoardGame {
     private final int nbCase = 64;
     public ArrayList<Event> boardGame = new ArrayList<>();
 
+    public Event getEvent(int position) {
+        return boardGame.get(position);
+    }
+
     public BoardGame() {
 
         for (int i = 0; i <= nbCase; i++) {
@@ -32,9 +36,13 @@ public class BoardGame {
     }
 
     /********************* getter *********************/
-    public int getNbCase() { return nbCase; }
+    public int getNbCase() {
+        return nbCase;
+    }
 
-    public ArrayList<Event> getBoardGame() { return boardGame; }
+    public ArrayList<Event> getBoardGame() {
+        return boardGame;
+    }
 
     /********************* setter *********************/
     public void setBoardGame(ArrayList<Event> boardGame) {

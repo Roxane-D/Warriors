@@ -1,18 +1,27 @@
 package com.warriors.event.bonus;
 
-import com.warriors.event.Event;
 import com.warriors.characters.Hero;
+import com.warriors.characters.Warrior;
 
-public class Sword implements Event {
+public class Sword extends Bonus {
 
-    @Override
-    public void interact(Hero h) { }
+    public Sword() {
+        super(0, 5);
+    }
 
-    public String toString(){
+    public String toString() {
         return "Draw the Sword !";
     }
 
-    public Sword(){
-        System.out.println("Draw the Sword !");
+    public void interact(Hero h) {
+        if (h instanceof Warrior) {
+            System.out.println("Drop the weapon Warrior.");
+            statsUpdate(h);
+        }
+        System.out.println("Don't touch this wizard !");
     }
 }
+
+
+
+

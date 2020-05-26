@@ -1,18 +1,22 @@
 package com.warriors.event.enemies;
 
-import com.warriors.event.Event;
 import com.warriors.characters.Hero;
 
-public class Dragon implements Event {
+public class Dragon extends Enemy{
 
-    @Override
-    public void interact(Hero h) { }
+    public Dragon(){
+        super(15,4);
+    }
 
     public String toString(){
         return "A Dragon !";
     }
 
-    public Dragon(){
-        System.out.println("A Dragon !");
+    @Override
+    public void interact(Hero h) {
+        System.out.println("*** Hey Dragon, bring it on ! ***");
     }
+
+
+
 }

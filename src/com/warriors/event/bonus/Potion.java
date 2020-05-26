@@ -1,18 +1,18 @@
 package com.warriors.event.bonus;
 
-import com.warriors.event.Event;
 import com.warriors.characters.Hero;
 
-public class Potion implements Event {
+public class Potion extends Bonus {
 
-    @Override
-    public void interact(Hero h) { }
+    public Potion() {
+    super(2,0);
+    }
 
-    public String toString(){
+    public String toString() {
         return "A Potion !";
     }
 
-    public Potion(){
-        System.out.println("A Potion !");
+    public void interact(Hero h) {
+        statsUpdate(h);;
     }
 }

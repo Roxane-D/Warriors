@@ -3,16 +3,21 @@ package com.warriors.event.enemies;
 import com.warriors.event.Event;
 import com.warriors.characters.Hero;
 
-public class Gobelin implements Event {
+public class Gobelin extends Enemy implements Event {
 
-    @Override
-    public void interact(Hero h) { }
+    public Gobelin(){
+        super(6,1);
+    }
 
     public String toString(){
         return "A Gobelin !";
     }
 
-    public Gobelin(){
-        System.out.println("A Gobelin !");
+    @Override
+    public void interact(Hero h) {
+        System.out.println("*** Gobelin... Bring it on ! ***");
     }
+
+
+
 }

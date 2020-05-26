@@ -1,18 +1,24 @@
 package com.warriors.event.bonus;
 
-import com.warriors.event.Event;
 import com.warriors.characters.Hero;
+import com.warriors.characters.Wizard;
 
-public class Thunder implements Event {
+public class Thunder extends Bonus {
 
-    @Override
-    public void interact(Hero h) { }
+    public Thunder() {
+        super(0, 2);
+    }
 
-    public String toString(){
+    public String toString() {
         return "Bring the Thunder !";
     }
 
-    public Thunder(){
-        System.out.println("Bring the Thunder !");
+    public void interact(Hero h) {
+        if (h instanceof Wizard) {
+            System.out.println("Take this thunder Wizard");
+            statsUpdate(h);
+        }
+        System.out.println("Don't touch this warrior !");
     }
+
 }

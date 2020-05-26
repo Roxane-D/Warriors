@@ -1,18 +1,19 @@
 package com.warriors.event.bonus;
 
-import com.warriors.event.Event;
 import com.warriors.characters.Hero;
 
-public class PotionMax implements Event {
+public class PotionMax extends Bonus{
 
-    @Override
-    public void interact(Hero h) { }
-
-    public String toString(){
-        return "A Maw Potion !";
+    public PotionMax() {
+    super(5,0);
     }
 
-    public PotionMax(){
-        System.out.println("A Max Potion !");
+    public String toString() {
+        return "A Max Potion !";
     }
+
+    public void interact(Hero h) {
+        statsUpdate(h);
+    }
+
 }

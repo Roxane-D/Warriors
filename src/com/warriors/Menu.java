@@ -42,13 +42,13 @@ public class Menu {
     public Hero creatHero() {
         String hero = chosePlayer();
         if (hero.equals("WARRIOR")) {
-            Warrior w1 = new Warrior();
+            Hero w1 = new Warrior();
             definiteHero(w1);
             System.out.println(w1.toString());
 
             return w1;
         } else {
-            Wizard w1 = new Wizard();
+            Hero w1 = new Wizard();
             definiteHero(w1);
             System.out.println(w1.toString());
 

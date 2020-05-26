@@ -11,7 +11,4 @@ public class CaseEmpty implements Event{
         return "You're safe... for now.";
     }
 
-    public CaseEmpty(){
-        System.out.println("You're safe... for now.");
-    }
 }
