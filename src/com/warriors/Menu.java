@@ -59,17 +59,17 @@ public class Menu {
 
     public void definiteHero(Hero h) {
         Scanner inputName = new Scanner(System.in);
-        System.out.println("Chose your name : ");
+        System.out.println("Choose your name " + h.getType() + " : ");
         String choosename = inputName.nextLine();
         h.setName(choosename);
 
         Scanner inputHealth = new Scanner(System.in);
-        System.out.println(" chose your health (3-6) : ");
+        System.out.println("Choose your health (" + h.getHealthMin() + "-" + h.getHealthMax() + ") : ");
         int choosehealth = inputHealth.nextInt();
         h.setHealth(choosehealth);
 
         Scanner inputStrength = new Scanner(System.in);
-        System.out.println("Chose your strength (8-15) : ");
+        System.out.println("Choose your strength (" + h.getStrengthMin() + "-" + h.getStrengthMax() + ") : ");
         int choosestrength = inputStrength.nextInt();
         h.setStrength(choosestrength);
     }

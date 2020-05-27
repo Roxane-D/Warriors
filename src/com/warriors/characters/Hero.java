@@ -66,7 +66,7 @@ public abstract class Hero {
      */
     public String toString() {
         return
-                "****************" + this.type + "****************\n" +
+                "**************** " + this.type.toUpperCase() + " ****************\n" +
                         "NAME : " + this.name + "\n" +
                         "HEALTH : " + this.health + "\n" +
                         "STRENGTH : " + this.strength + "\n" +
@@ -76,10 +76,12 @@ public abstract class Hero {
 
     /********************* methods *********************/
     public void strengthUpdate(Bonus b) {
+
         this.setStrength(this.getStrength() + b.getStrength());
     }
 
     public void healthUpdate(Bonus b) {
+
         this.setHealth(this.getHealth() + b.getHealth());
     }
 
@@ -132,10 +134,10 @@ public abstract class Hero {
     public void setHealth(int health) {
         if (health >= getHealthMin() && health <= getHealthMax()) {
             this.health = health;
-        } else if (health > getHealthMax()) {
-            this.health = getHealthMax();
-        } else {
+        } else if (health > getStrengthMin()) {
             this.health = getHealthMin();
+        } else {
+            this.health = getHealthMax();
         }
     }
 
@@ -147,10 +149,10 @@ public abstract class Hero {
     public void setStrength(int strength) {
         if (strength >= getStrengthMin() && strength <= getStrengthMax()) {
             this.strength = strength;
-        } else if (strength > getStrengthMax()) {
-            this.strength = getStrengthMax();
-        } else {
+        } else if (strength < getStrengthMin()) {
             this.strength = getStrengthMin();
+        } else {
+            this.strength = getStrengthMax();
         }
     }
 

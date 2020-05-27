@@ -51,7 +51,7 @@ public class Play {
             } catch (OutOfBoard e) {
                 e.message();
             }
-//            bg.boardGame.get(playerCase).interact(this.hero);
+
             turn++;
 
             // Recap de debut de tour
@@ -74,7 +74,7 @@ public class Play {
                     case RUN_AWAY -> {
                         System.out.println("Too much. Roll the dice again !");
                         moveBack(newDice);
-                        System.out.println("----------------RECAP----------------\n" +
+                        System.out.println("----------------COWARD----------------\n" +
                                 "Move back : " + newDice +
                                 " | Your hero is on the case " + playerCase
                                 + " | " + bg.boardGame.get(playerCase) + "\n" +

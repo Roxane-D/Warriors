@@ -10,7 +10,7 @@ public class Wizard extends Hero {
     /********************* constructor *********************/
     public Wizard() {
 
-        super("Sorcerer", "Merlin", 5, 5);
+        super("Wizard", "Merlin", 5, 5);
     }
 
     public Wizard(String choosetype) {

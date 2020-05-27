@@ -3,8 +3,8 @@ package com.warriors.characters;
 public class Warrior extends Hero {
     protected static final int healthMin = 5;
     protected static final int healthMax = 10;
-    protected static final int strengthMin = 5;
-    protected static final int strengthMax = 5;
+    protected static final int strengthMin = 8;
+    protected static final int strengthMax = 15;
 
     /********************* constructor *********************/
     public Warrior() {
