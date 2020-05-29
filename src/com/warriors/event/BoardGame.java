@@ -9,6 +9,7 @@ public class BoardGame {
 
     private final int nbCase = 64;
     public ArrayList<Event> boardGame = new ArrayList<>();
+//    public ArrayList<?extends Event> bg = new ArrayList<Dragon>();
 
     public Event getEvent(int position) {
         return boardGame.get(position);

@@ -64,7 +64,7 @@ public class Play {
 
             Event ev = bg.getEvent(playerCase);
             ev.interact(this.hero);
-            scanner.nextLine();
+//            scanner.nextLine();
             if (ev instanceof Enemy) {
                 Enemy enemy = (Enemy) ev;
                 Combat combat = new Combat();
@@ -72,7 +72,7 @@ public class Play {
 
                 switch (result) {
                     case RUN_AWAY -> {
-                        System.out.println("Too much. Roll the dice again !");
+                        System.out.println("Roll the dice !");
                         moveBack(newDice);
                         System.out.println("----------------COWARD----------------\n" +
                                 "Move back : " + newDice +
@@ -101,6 +101,11 @@ public class Play {
             scanner.nextLine();
 
         }
-        System.out.println("YOU ROOOOOOOOOXXXXXXXXX !!!!");
+        System.out.println(
+                "__   _____  _   _   ____   ___   ___   ___   ___   ___   ___   ___   ___   _____  ____  ____  ____  ____  ____  ____  ____  ____  __  _ _ _ _ \n" +
+                "\\ \\ / / _ \\| | | | |  _ \\ / _ \\ / _ \\ / _ \\ / _ \\ / _ \\ / _ \\ / _ \\ / _ \\ / _ \\ \\/ /\\ \\/ /\\ \\/ /\\ \\/ /\\ \\/ /\\ \\/ /\\ \\/ /\\ \\/ /\\ \\/ / | | | | |\n" +
+                " \\ V / | | | | | | | |_) | | | | | | | | | | | | | | | | | | | | | | | | | | | \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  | | | | |\n" +
+                "  | || |_| | |_| | |  _ <| |_| | |_| | |_| | |_| | |_| | |_| | |_| | |_| | |_| /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  /  \\  |_|_|_|_|\n" +
+                "  |_| \\___/ \\___/  |_| \\_\\\\___/ \\___/ \\___/ \\___/ \\___/ \\___/ \\___/ \\___/ \\___/_/\\_\\/_/\\_\\/_/\\_\\/_/\\_\\/_/\\_\\/_/\\_\\/_/\\_\\/_/\\_\\/_/\\_\\ (_|_|_|_)");
     }
 }

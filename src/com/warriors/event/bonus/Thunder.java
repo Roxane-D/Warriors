@@ -15,10 +15,24 @@ public class Thunder extends Bonus {
 
     public void interact(Hero h) {
         if (h instanceof Wizard) {
-            System.out.println("Take this thunder Wizard");
+            System.out.println("TAKE THIS THUNDER WIZARD");
+            System.out.println(
+                    "      _____\n" +
+                    "     /    /\n" +
+                    "    /    /\n" +
+                    "   /    /\n" +
+                    "  /    /____\n" +
+                    " /         /\n" +
+                    "/_____    /\n" +
+                    "     /   /\n" +
+                    "    /   /\n" +
+                    "   /   /\n" +
+                    "  /  /\n" +
+                    "  /\n");
             statsUpdate(h);
+        } else {
+            System.out.println("DON'T TOUCH THIS WARRIOR !");
         }
-        System.out.println("Don't touch this warrior !");
     }
 
 }

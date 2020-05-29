@@ -15,10 +15,27 @@ public class Sledgehammer extends Bonus {
 
     public void interact(Hero h) {
         if (h instanceof Warrior) {
-            System.out.println("Drop the weapon Warrior.");
+            System.out.println("DROP THE WEAPON WARRIOR.");
+            System.out.println("     ___________\n" +
+                    "._____l_______l_____.\n" +
+                    "||_____/  |  \\_____||\n" +
+                    "      /   |   \\\n" +
+                    "     /    |    \\\n" +
+                    "    /     |     \\\n" +
+                    "   /      |      \\\n" +
+                    "  /       |       \\\n" +
+                    " /        |        \\\n" +
+                    "|         |         |\n" +
+                    " \\        |        /\n" +
+                    "   \\      |      /\n" +
+                    "     \\    |    /\n" +
+                    "       \\  |  /\n" +
+                    "         \\|/\n" +
+                    "          `\n");
             statsUpdate(h);
+        }else {
+            System.out.println("DON'T TOUCH THIS WIZARD !");
         }
-        System.out.println("Don't touch this wizard !");
     }
 
 

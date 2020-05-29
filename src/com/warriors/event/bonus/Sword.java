@@ -15,10 +15,20 @@ public class Sword extends Bonus {
 
     public void interact(Hero h) {
         if (h instanceof Warrior) {
-            System.out.println("Drop the weapon Warrior.");
+            System.out.println("DROP THE WEAPON WARRIOR.");
+            System.out.println("                                                            |\\\n" +
+                    "                                                            <<\\         _\n" +
+                    "                                                             / \\       //\n" +
+                    " _-----------------------------------------------------------{o}______/|\n" +
+                    "<       -==============================================:::{*}///////////]\n" +
+                    " ------------------------------------------------------------{o}~~~~~~\\|\n" +
+                    "                                                             \\ /       \\\\\n" +
+                    "                                                            <</         ~\n" +
+                    "                                                            |/\n");
             statsUpdate(h);
+        }else {
+            System.out.println("DON'T TOUCH THIS WIZARD !");
         }
-        System.out.println("Don't touch this wizard !");
     }
 }
 

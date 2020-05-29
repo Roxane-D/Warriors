@@ -21,6 +21,7 @@ public abstract class Hero {
      */
     private int strength;
 
+
     public abstract int getHealthMin();
     public abstract int getHealthMax();
     public abstract int getStrengthMin();
@@ -38,7 +39,7 @@ public abstract class Hero {
     /**
      * Constructeur avec un argument
      *
-     * @param choosetype parametre du type du Hero
+     * @param choosetype string
      */
     public Hero(String choosetype) {
 
@@ -61,8 +62,8 @@ public abstract class Hero {
 
     }
 
-    /**
-     * @return
+    /** Affichage des stats du héro
+     * @return string
      */
     public String toString() {
         return
@@ -98,28 +99,37 @@ public abstract class Hero {
     /**
      * retourne le nom du Hero
      *
-     * @return le nom sous forme de chaine de caracteres
+     * @return string
      */
     public String getName() {
         return name;
     }
 
+    /**
+     * retourne la vie du Hero
+     * @return int
+     */
     public int getHealth() {
         return health;
     }
 
+    /**
+     * retourne la force du Hero
+     * @return int
+     */
     public int getStrength() {
         return strength;
     }
 
     /**
-     * retourne le nom du Hero
+     * retourne le type du Hero
      *
-     * @return le type sous forme de chaine de caracteres
+     * @return string
      */
     public String getType() {
         return type;
     }
+
 
     /********************* setter *********************/
     public void setName(String name) {
@@ -127,14 +137,14 @@ public abstract class Hero {
     }
 
     /**
-     * Met a jour la vie du Hero
+     * Met a jour la vie du Hero selon le min et le max du Hero
      *
      * @param health la nouvelle vie du Hero
      */
     public void setHealth(int health) {
         if (health >= getHealthMin() && health <= getHealthMax()) {
             this.health = health;
-        } else if (health > getStrengthMin()) {
+        } else if (health < getStrengthMin()) {
             this.health = getHealthMin();
         } else {
             this.health = getHealthMax();
@@ -142,7 +152,7 @@ public abstract class Hero {
     }
 
     /**
-     * Met a jour la force du Hero
+     * Met a jour la force du Hero le min et le max du Hero
      *
      * @param strength la nouvelle force du Hero
      */
