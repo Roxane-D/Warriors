@@ -2,10 +2,13 @@ package com.warriors;
 
 import com.warriors.characters.Hero;
 import com.warriors.characters.Warrior;
+import com.warriors.characters.Wizard;
+import com.warriors.db.DbConnect;
 
 public class Main {
 
     public static void main(String[] args) {
+
 
         Menu start = new Menu();
         Hero h = start.creatHero();
