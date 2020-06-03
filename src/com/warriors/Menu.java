@@ -76,7 +76,7 @@ public class Menu {
         h.setStrength(choosestrength);
     }
 
-    public void drawWelcome(){
+    public void drawWelcome() {
         System.out.println(
                 "                                       \n" +
                         "             \\                  /\n" +
